@@ -5,7 +5,7 @@ filename <- args[2]
 
 data_dir <- file.path(work_dir, 'data')
 dir.create(data_dir)
-unzip(file.path(work_dir, "dataset.zip"), exdir=data_dir)
+unzip(file.path(work_dir, "download", "dataset.zip"), exdir=data_dir)
 
 file.remove(file.path(data_dir, c('README.txt', 'Supplementary Tables.xlsx')))
 

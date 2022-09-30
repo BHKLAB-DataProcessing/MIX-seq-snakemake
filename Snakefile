@@ -10,7 +10,7 @@ filename = config["filename"]
 
 rule get_SummarizedExp:
     input:
-        S3.remote(prefix + 'dataset.zip')
+        S3.remote(prefix + 'download/dataset.zip')
     output:
         S3.remote(prefix + filename)
     resources:
@@ -25,7 +25,7 @@ rule get_SummarizedExp:
 
 rule download_data:
     output:
-        S3.remote(prefix + 'dataset.zip')
+        S3.remote(prefix + 'download/dataset.zip')
     shell:
         """
         Rscript scripts/download_multiplexed.R \
