@@ -1,4 +1,4 @@
-options(timeout = 1000)
+options(timeout = 60000)
 args <- commandArgs(trailingOnly = TRUE)
 work_dir <- args[1]
 
