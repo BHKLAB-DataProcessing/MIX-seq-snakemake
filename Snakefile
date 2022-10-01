@@ -14,7 +14,7 @@ rule get_SummarizedExp:
     output:
         S3.remote(prefix + filename)
     resources:
-        mem_mb=4000
+        mem_mb=8000
     shell:
         """
         Rscript scripts/get_multiplexed.R \
